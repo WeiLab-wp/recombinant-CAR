@@ -33,7 +33,7 @@ ensembl <- rownames(subset.fpkm)
 symb <-getBM(values = ensembl, attributes = c("hgnc_symbol","ensembl_gene_id"),
              filters = "ensembl_gene_id",  mart = my_dataset)
 symb <- cbind(subset(subset.fpkm,rownames(subset.fpkm)%in% symb$ensembl_gene_id),symb$hgnc_symbol)
-write.csv(symb,"./Data/3.witn_symb.csv")
+write.csv(symb,"./Data/3.with_symb.csv")
 
                   ###################recommanded genes##########################
 
