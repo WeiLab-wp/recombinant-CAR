@@ -14,7 +14,7 @@ for(i in 1:5){
   result[,i] <- (subset.fpkm[,i*2-1]) / (subset.fpkm[,i*2])}
 
 result <- log2(result)
-write.csv(result,"../Data/4.screen_1.log.csv")
+write.csv(result,"../Data/4.screen_1.log_fold_change.csv")
 
 pheatmap(result,clustering_method = "ward.D", cluster_cols = T,cluster_rows = T,treeheight_row = 50,border= F,
          color = colorRampPalette(c("blue3","royalblue","white","red" ,"red3"))(120),annotation_names_row = F,show_rownames = F)
